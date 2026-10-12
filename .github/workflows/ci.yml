@@ -22,7 +22,7 @@ jobs:
         run: |
           pip install torch --index-url https://download.pytorch.org/whl/cpu
           pip install --no-deps -e .
-          pip install numpy pillow h5py scipy scikit-image opencv-python-headless graphslam==0.0.17 pytest ruff
+          pip install numpy pillow h5py scipy scikit-image opencv-python-headless matplotlib graphslam==0.0.17 pytest ruff
       - name: Lint
         run: ruff check .
       - name: Test
