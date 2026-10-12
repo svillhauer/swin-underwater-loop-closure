@@ -1,0 +1,47 @@
+{
+  "name": "Oracle (ground-truth loops)",
+  "dataset": "data/test_rocky",
+  "steps": 397,
+  "candidates_checked": 15405,
+  "true_loops_available": 2558,
+  "stage1_detector": {
+    "tp": 2558,
+    "fp": 0,
+    "fn": 0,
+    "tn": 12847
+  },
+  "stage2_ransac": {
+    "tp": 1627,
+    "fp": 0,
+    "fn": 931,
+    "tn": 12847
+  },
+  "stage3_filter": {
+    "tp": 580,
+    "fp": 0,
+    "fn": 1978,
+    "tn": 12847
+  },
+  "ate_mean": 1.2833519698462275,
+  "ate_std": 0.5801764971669405,
+  "seconds": {
+    "detector": 0.0008833408355712891,
+    "ransac": 179.37132740020752,
+    "graph": 16.135070085525513
+  },
+  "config": {
+    "data": "data/test_rocky",
+    "detector": "oracle",
+    "scnn": null,
+    "swin_head": null,
+    "variant": "mlp3",
+    "threshold": 0.5,
+    "no_ransac": false,
+    "no_filter": false,
+    "loop_margin": 5,
+    "loop_separation": 5,
+    "noise_level": 0,
+    "max_steps": null,
+    "name": "Oracle (ground-truth loops)"
+  }
+}

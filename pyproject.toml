@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "loopclosure"
+version = "0.1.0"
+description = "Swin Transformer vs. Siamese CNN loop detection for underwater visual graph SLAM"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Sarah Villhauer" }]
+dependencies = [
+    "torch>=2.1",
+    "numpy",
+    "pillow",
+    "h5py",
+    "scikit-image",
+]
+
+[project.optional-dependencies]
+swin = ["transformers>=4.40"]
+slam = ["scipy", "opencv-python>=4.4", "matplotlib", "graphslam==0.0.17"]
+dev = ["pytest", "ruff"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+extend-exclude = ["third_party"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["loopclosure"]

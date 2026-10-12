@@ -1,0 +1,47 @@
+{
+  "name": "Swin-T + MLP-3",
+  "dataset": "data/test_rocky",
+  "steps": 397,
+  "candidates_checked": 15405,
+  "true_loops_available": 2558,
+  "stage1_detector": {
+    "tp": 363,
+    "fp": 578,
+    "fn": 2195,
+    "tn": 12269
+  },
+  "stage2_ransac": {
+    "tp": 237,
+    "fp": 0,
+    "fn": 2321,
+    "tn": 12847
+  },
+  "stage3_filter": {
+    "tp": 151,
+    "fp": 0,
+    "fn": 2407,
+    "tn": 12847
+  },
+  "ate_mean": 7.766063323904976,
+  "ate_std": 5.273086117074558,
+  "seconds": {
+    "detector": 0.4660530090332031,
+    "ransac": 31.57685899734497,
+    "graph": 3.114841938018799
+  },
+  "config": {
+    "data": "data/test_rocky",
+    "detector": "swin",
+    "scnn": null,
+    "swin_head": "weights/swin_mlp3.pth",
+    "variant": "mlp3",
+    "threshold": 0.5,
+    "no_ransac": false,
+    "no_filter": false,
+    "loop_margin": 5,
+    "loop_separation": 5,
+    "noise_level": 0,
+    "max_steps": null,
+    "name": "Swin-T + MLP-3"
+  }
+}

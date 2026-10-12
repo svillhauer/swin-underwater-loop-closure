@@ -1,0 +1,3 @@
+[submodule "third_party/GSLAM"]
+	path = third_party/GSLAM
+	url = https://github.com/aburguera/GSLAM

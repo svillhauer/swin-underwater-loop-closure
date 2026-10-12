@@ -1,0 +1,19 @@
+# Datasets and model weights (downloaded; see README)
+data/
+weights/
+*.h5
+*.pth
+*.pt
+
+# Run outputs (results/*.json and figures are versioned)
+results/*/cache/
+results/*.npz
+!results/slam_*/*.npz
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.pytest_cache/
+.ruff_cache/

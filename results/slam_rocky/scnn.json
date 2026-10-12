@@ -1,0 +1,47 @@
+{
+  "name": "SCNN",
+  "dataset": "data/test_rocky",
+  "steps": 397,
+  "candidates_checked": 15405,
+  "true_loops_available": 2558,
+  "stage1_detector": {
+    "tp": 2544,
+    "fp": 10458,
+    "fn": 14,
+    "tn": 2389
+  },
+  "stage2_ransac": {
+    "tp": 1621,
+    "fp": 0,
+    "fn": 937,
+    "tn": 12847
+  },
+  "stage3_filter": {
+    "tp": 580,
+    "fp": 0,
+    "fn": 1978,
+    "tn": 12847
+  },
+  "ate_mean": 1.2749747880732685,
+  "ate_std": 0.5919163160120566,
+  "seconds": {
+    "detector": 0.6016039848327637,
+    "ransac": 208.87299990653992,
+    "graph": 16.513480186462402
+  },
+  "config": {
+    "data": "data/test_rocky",
+    "detector": "scnn",
+    "scnn": "weights/scnn_sea.h5",
+    "swin_head": null,
+    "variant": "mlp3",
+    "threshold": 0.5,
+    "no_ransac": false,
+    "no_filter": false,
+    "loop_margin": 5,
+    "loop_separation": 5,
+    "noise_level": 0,
+    "max_steps": null,
+    "name": "SCNN"
+  }
+}
